@@ -20,8 +20,8 @@ def zeros(mat, epsilon=None):
     return np.zeros(mat.shape) + epsilon
 
 class Model(object):
-    """Model is a superclass abstraction for both RNTN and RNN.
-    After initializing, call this with .run()
+    """
+    Model is a superclass abstraction for both RNTN and RNN.
 
     @dim_size: dimension of the word vectors
     @num_classes: how many class output predictions we have (5).
@@ -416,6 +416,8 @@ class Model(object):
 
 class RNTN(Model):
     """Recursive Neural Tensor Network: Numpy Implementation
+
+    Can call this with either .run() or .grid_search()
 
     as described in:
     - Recursive Deep Models for Semantic Compositionality Over a Sentiment
